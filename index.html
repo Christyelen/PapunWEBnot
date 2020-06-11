@@ -10,6 +10,9 @@
     <script>
         var modal = document.getElementById('id01');
 
+        function abreMenu() {
+            window.location.href = "Menu.html"
+        }
     </script>
 </head>
 
@@ -23,7 +26,7 @@
     <div id="#tudo" style="width: 100%;">
         <div id="id01" class="modal0">
 
-            <form class="modal-content animate" >
+            <form class="modal-content animate" action="Menu.html">
 
 
                 <div class="container">
@@ -37,7 +40,7 @@
 
                     <label for="psw"><b>Senha</b></label>
                     <input type="password" placeholder="Insira a senha" name="psw" required>
-                    <button type="submit"><a target="_blank" href='menu.html'>Concluido</a></button>
+                    <button type="submit"><a href='menu.html'>Concluido</a></button>
 
                 </div>
             </form>
@@ -45,7 +48,8 @@
 
         <div id="id02" class="modal">
 
-            <form class="modal-content animate" action="Menu.html" style="float: right;">
+            <form class="modal-content animate" action="Menu.html"
+             style="float: right;">
                 <h1>Não tem cadastro? Cadastre-se aqui</h1>
                 <div class="container">
                     <label for="uname"><b>Nome</b></label>
