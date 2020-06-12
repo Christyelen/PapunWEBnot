@@ -26,7 +26,7 @@
     <div id="#tudo" style="width: 100%;">
         <div id="id01" class="modal0">
 
-            <form class="modal-content animate" onclick="abreMenu">
+            <form class="modal-content animate" action="menu.html">
 
 
                 <div class="container">
@@ -36,11 +36,10 @@
                     <br>
 
                     <label for="uname"><b>Email</b></label>
-                    <input type="text" placeholder="Insira o email" name="uname" required>
-
+                    <input type="text" minlength="10" placeholder="Insira o email" name="uname" required>
                     <label for="psw"><b>Senha</b></label>
-                    <input type="password" placeholder="Insira a senha" name="psw" required>
-                    <button type="submit"><a href='menu.html'>Concluido</a></button>
+                    <input type="password" minlength="4" placeholder="Insira a senha" name="psw" required>
+                    <button type="submit">Concluido</button>
 
                 </div>
             </form>
@@ -53,21 +52,21 @@
                 <h1>Não tem cadastro? Cadastre-se aqui</h1>
                 <div class="container">
                     <label for="uname"><b>Nome</b></label>
-                    <input type="text" placeholder="Insira o nome" name="uname" required>
+                    <input type="text" minlength="2" maxlength="30" placeholder="Insira o nome" name="uname" required>
 
                     <label for="uname"><b>Sobrenome</b></label>
-                    <input type="text" placeholder="Insira o sobrenome" name="uname" required>
+                    <input type="text" minlength="2" minlength="30" placeholder="Insira o sobrenome" name="uname" required>
 
                     <label for="uname"><b>Email</b></label>
-                    <input type="text" placeholder="Insira o email" name="uname" required>
+                    <input type="text" minlength="10" placeholder="Insira o email" name="uname" required>
 
                     <label for="psw"><b>Senha</b></label>
-                    <input type="password" placeholder="Insira a senha" name="psw" required>
+                    <input type="password" minlength="4 placeholder="Insira a senha" name="psw" required>
 
                     <label for="uname"><b>Repita a senha</b></label>
-                    <input type="password" placeholder="Insira a senha" name="psw" required>
+                    <input type="password" minlength="4 placeholder="Insira a senha" name="psw" required>
 
-                    <button type="submit"><a href='menu.html'>Concluido</a></button>
+                    <button type="submit">Concluido</a></button>
             </form>
 
             </div>
