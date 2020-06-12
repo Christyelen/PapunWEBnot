@@ -8,17 +8,26 @@
     <link rel="stylesheet" type="text/css" href="Login.css" media="screen" />
 
     <script>
-        var modal = document.getElementById('id01');
+        var password = document.getElementById("password")
+        var confirm_password = document.getElementById("confirm_password");
 
-        function abreMenu() {
-            window.location.href = "Menu.html"
+        function validatePassword() {
+            var password = document.getElementById("password")
+            var confirm_password = document.getElementById("confirm_password");
+            if (password.value != confirm_password.value) {
+                alert("SENHAS DIFERENTES!\nFAVOR DIGITAR SENHAS IGUAIS"); 
+                console.log("diferente!");
+            } else {
+                console.log("Igual!");
+                confirm_password.setCustomValidity('');
+            }
         }
     </script>
 </head>
 
 <body>
     <header style="background-color: #92afb5;" style="background-color: #92afb5;">
-        <a href="login.html">
+        <a href="index.html">
             <img style="background-color: #92afb5; " id="img-logo-1" src="Imagens/Logo trabalho.png" a>
         </a>
 
@@ -38,7 +47,7 @@
                     <label for="uname"><b>Email</b></label>
                     <input type="text" minlength="10" placeholder="Insira o email" name="uname" required>
                     <label for="psw"><b>Senha</b></label>
-                    <input type="password" minlength="4" placeholder="Insira a senha" name="psw" required>
+                    <input type="password" minlength="4" placeholder="****" name="psw" required>
                     <button type="submit">Concluido</button>
 
                 </div>
@@ -47,33 +56,33 @@
 
         <div id="id02" class="modal">
 
-            <form class="modal-content animate" action="Menu.html"
-             style="float: right;">
+            <form class="modal-content animate" action="menu.html" style="float: right;">
                 <h1>Não tem cadastro? Cadastre-se aqui</h1>
                 <div class="container">
                     <label for="uname"><b>Nome</b></label>
                     <input type="text" minlength="2" maxlength="30" placeholder="Insira o nome" name="uname" required>
 
                     <label for="uname"><b>Sobrenome</b></label>
-                    <input type="text" minlength="2" minlength="30" placeholder="Insira o sobrenome" name="uname" required>
+                    <input type="text" minlength="2" minlength="30" placeholder="Insira o sobrenome" name="uname"
+                        required>
 
                     <label for="uname"><b>Email</b></label>
                     <input type="text" minlength="10" placeholder="Insira o email" name="uname" required>
 
                     <label for="psw"><b>Senha</b></label>
-                    <input type="password" minlength="4 placeholder="Insira a senha" name="psw" required>
+                    <input type="password" minlength="4" id="password" placeholder="****" name="psw" required>
 
                     <label for="uname"><b>Repita a senha</b></label>
-                    <input type="password" minlength="4 placeholder="Insira a senha" name="psw" required>
+                    <input type="password" minlength="4" id="confirm_password" placeholder="****" name="psw" required>
 
-                    <button type="submit">Concluido</a></button>
+                    <button type="submit" onblur="validatePassword">Concluido</a></button>
             </form>
 
-            </div>
         </div>
-        <footer id="rodape">
-            <p>Papun<br>Christyelen Kramel e Vinicius Pereira Forte - 2020</p>
-        </footer>
+    </div>
+    <footer id="rodape">
+        <p>Papun<br>Christyelen Kramel e Vinicius Pereira Forte - 2020</p>
+    </footer>
 
 </body>
 
